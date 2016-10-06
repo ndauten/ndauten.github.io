@@ -25,6 +25,10 @@ html {
 	padding:0px;
 	/*background:#ddd;*/
 }
+#lpad {
+    margin-left: 100px;
+    padding-left: 2cm;
+}
 #homeL {
 	background:url(images/back.jpg);
 	float:left;
@@ -211,9 +215,11 @@ h4{
 	font:bold;
 }
 .style16 {
+    text-align: left;
 	color: #000000;
 	font-family: "Tahoma";
 	font-size:12pt;
+    padding-left: 1cm;
 }
 .style16 a:link {
 	color:black;
