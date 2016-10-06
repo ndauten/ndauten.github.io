@@ -38,6 +38,13 @@ html {
 	overflow:auto;
 	/*background:#9c9;*/
 }
+#homeContact {
+	float:left;
+	width:600px;
+	height:325px;
+	padding:0px;
+	overflow:auto;
+}
 #homeR {
 	float:right;
 	background:url(images/side3.jpg);
@@ -219,7 +226,7 @@ h4{
 	color: #000000;
 	font-family: "Tahoma";
 	font-size:12pt;
-    padding-left: 1cm;
+    padding-left: .7cm;
 }
 .style16 a:link {
 	color:black;
