@@ -41,11 +41,16 @@ html {
 #homeContact {
 	float:left;
 	width:600px;
-	height:325px;
+	height:450px;
 	padding:0px;
 	overflow:auto;
 }
-#homeR {
+#homeContact p.vcenter img { 
+    padding-top: 10%; 
+    text-align:right; 
+    vertical-align:middle; 
+}
+#homeR { 
 	float:right;
 	background:url(images/side3.jpg);
 	width:175px;
