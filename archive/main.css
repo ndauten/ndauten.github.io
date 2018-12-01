@@ -1,0 +1,289 @@
+@charset "UTF-8";
+/* CSS Document */
+ 
+ 
+body,
+html {
+	float:center;
+	margin:0;
+	padding:0;
+	color:#000;
+	/*background:#a7a09a;*/
+}
+#black {
+	width:1000px;
+	margin:0 auto;
+	background-color:#000000;
+}	
+#wrap {
+	width:800px;
+	padding:0px;
+	margin:0 auto;
+	/*background:#99c;*/
+}
+#header {
+	padding:0px;
+	/*background:#ddd;*/
+}
+#lpad {
+    margin-left: 100px;
+    padding-left: 2cm;
+}
+#homeL {
+	background:url(images/back.jpg);
+	float:left;
+	width:600px;
+	height:500px;
+	padding:0px;
+	overflow:auto;
+	/*background:#9c9;*/
+}
+#homeContact {
+	float:left;
+	width:600px;
+	height:450px;
+	padding:0px;
+	overflow:auto;
+}
+#homeContact p.vcenter img { 
+    padding-top: 10%; 
+    text-align:right; 
+    vertical-align:middle; 
+}
+#homeR { 
+	float:right;
+	background:url(images/side3.jpg);
+	width:175px;
+	height:500px;
+	padding:0px;
+	/*background:#99c;*/
+}
+#acadL {
+	float:left;
+	background:url(images/acad.jpg);
+	width:175px;
+	height:500px;
+	padding:0px;
+	/*background:#99c;*/
+}
+#acadR {
+	background:url(images/acad_back.jpg);
+	float:right;
+	width:600px;
+	height:500px;
+	padding:0px;
+	overflow:auto;
+	/*background:#9c9;*/
+}
+#reseL {
+	background:url(images/rese_back.jpg);
+	float:left;
+	width:600px;
+	height:525px;
+	padding:0px;
+	overflow:auto;
+	/*background:#9c9;*/
+}
+#reseR {
+	background:url(images/rese2.jpg);
+	float:right;
+	width:175px;
+	height:525px;
+	padding:0px;
+	/*background:#9c9;*/
+}
+#profR {
+	float:right;
+	background:url(images/prof.jpg);
+	width:175px;
+	height:500px;
+	padding:0px;
+	overflow:auto;
+	/*background:#99c;*/
+}
+#profL {
+	background:url(images/prof_back.jpg);
+	float:left;
+	width:600px;
+	height:500px;
+	padding:0px;
+	overflow:auto;
+	/*background:#9c9;*/
+}
+#persL {
+	background:url(images/pers_back.jpg);
+	float:left;
+	width:600px;
+	height:500px;
+	padding:0px;
+	overflow:auto;
+	/*background:#9c9;*/
+}
+#persR {
+	background:url(images/pers2.jpg);
+	float:right;
+	width:175px;
+	height:500px;
+	padding:0px;
+	/*background:#9c9;*/
+}
+#sidebar p {
+	font-family: "Tahoma";
+	font: bold;
+	color: black;
+}
+#sidebar a {
+	font-family: "Tahoma";
+	font: bold;
+	color: black;
+	text-decoration: underline;
+}
+#sidebar a:hover{
+	text-decoration: none;
+}
+#sidebar h2 {
+	color: black;
+} 
+#footer {
+	clear:both;
+	padding:5px 10px;
+	height:25px;
+	font-family: "Tahoma";
+	font: 
+	/*background:#cc9;*/
+}
+#footer p {
+	margin:0;
+}
+* html #footer {
+	height:1px;
+}
+body{
+	font: "Tahoma";
+	color: #000000;
+	line-height: 1.166;	
+	margin: 0px;
+	padding: 0px;
+}
+h1{
+  	margin:0;
+	font-family: "Tahoma";
+	size:18pt; 
+	color: #000000;
+} 
+h2{
+	margin:0 0 1em;
+	font-family: "Tahoma"; 
+	size:17pt; 
+	color: #000000;
+} 
+h3{
+	font-family: "Tahoma";
+	size:17pt;
+	color: #000000;
+}
+h4{
+	font-family: "Tahoma";
+	size:17pt;
+	color: #000000;
+}
+.style11 {
+	color: #CC3300;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.style12 {
+	color: #333333;
+	font-family: "Tahoma";
+	font:bold;
+}
+.style13 {
+	a-link:white;
+	a-hover:white;
+	a-visited:white;
+	font-size:11pt;
+	color: white;
+	font-family: "Tahoma";
+}
+.style13 a:link {
+	color: white;
+	text-decoration: underline;
+}
+.style13 a:visited {
+	color: white;
+	text-decoration: underline;
+}
+.style13 a:hover {
+	color: #CC0000;
+	text-decoration: underline;
+}
+.style14 {
+	color: #000000;
+	font-family: "Tahoma";
+	font-size:12pt;
+}
+.style15 {
+	color: #3416B4;
+	font-family: "Tahoma";
+	font:bold;
+}
+.style16 {
+    text-align: left;
+	color: #000000;
+	font-family: "Tahoma";
+	font-size:12pt;
+    padding-left: .7cm;
+    padding-right: .7cm;
+}
+.style16 a:link {
+	color:black;
+	text-decoration: underline
+}
+.style16 a:visited {
+	color: black;
+	text-decoration: underline;
+}
+.style16 a:hover {
+	color: #CC0000;
+	text-decoration: underline;
+}
+.style17 {
+	color: #000000;
+	font-family: "Tahoma";
+	font-size:13pt;
+}
+.style18 {
+	color: #000000;
+	font-family: "Tahoma";
+	font-size:10pt;
+	line-height:1.2;
+}
+.style18 a:link {
+	color:black;
+	text-decoration: underline
+}
+.style18 a:visited {
+	color: black;
+	text-decoration: underline;
+}
+.style18 a:hover {
+	color: #CC0000;
+	text-decoration: underline;
+}
+.style19 {
+	color: #000000;
+	font-family: "Tahoma";
+	font-size:11pt;
+	line-height:1.5;
+}
+.style19 a:link {
+	color:black;
+	text-decoration: underline
+}
+.style19 a:visited {
+	color: black;
+	text-decoration: underline;
+}
+.style19 a:hover {
+	color: #CC0000;
+	text-decoration: underline;
+}
