@@ -44,18 +44,28 @@
               <a class="nav-link js-scroll-trigger" href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#areas">Areas</a>
+              <a class="nav-link js-scroll-trigger" href="#students">Students</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#research">Research</a>
+            </li>
+            <!--
             <li class="nav-item">
               <a class="nav-link" href="https://scholar.google.com/citations?hl=en&user=zKVnPigAAAAJ&view_op=list_works&sortby=pubdate">Publications</a>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
-            </li>
+              -->
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#teaching">Teaching</a>
             </li>
+            <!--
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#service">Service</a>
+            </li>
+            -->
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#code">Code</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#news">News</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
@@ -97,7 +107,7 @@
             <hr>
             <a class="btn btn-primary js-scroll-trigger" href="#about">Research Overview</a>
             <a class="btn btn-primary" href="https://scholar.google.com/citations?hl=en&user=zKVnPigAAAAJ&view_op=list_works&sortby=pubdate">Publications</a>
-          </div>
+            <a class="btn btn-primary js-scroll-trigger" href="#recruiting">Want to Join?</a> </div>
         </div>
         <!--
         <div class="row">
@@ -160,7 +170,79 @@
       </div>
     </section>
 
-    <section id="areas">
+    <section class="bg-info" id="students">
+      <div class="container text-dark">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading mb-3">Students</h2>
+            <hr class="my-4">
+            <!--<i class="fa fa-4x fa-shield text-primary mb-0 sr-icons"></i>-->
+          </div>
+        </div>
+      </div>
+      <div class="container text-white d-flex">
+        <div class="row">
+          <div class="col-lg-6">
+            <p>
+            <b class="text-dark">PhD Students</b>
+            <ul>
+                <li>Ian Bridges -- Kernel Hardening and Memory Safety Analysis</li>
+                <li>Bruce Chen -- Privilege Analysis and Browser Separation</li>
+                <li>Fangfei Yang -- Hardware-Assisted Program Safety</li>
+                <li>Bumjin Im -- Automated Privilege Separation using Commodity Hardware</li>
+                <li>Yufeng Zhou -- Automated Privilege Separation and Nested Kernel Abstractions</li>
+            </ul>
+            </p>
+          </div>
+          <div class="col-lg-6">
+            <p>
+            <b class="text-dark text-center">Undergraduate Students</b>
+            <ul>
+                <li>Lily Gray -- Python Privilege Analysis</li>
+                <li>Clara Tian -- Browser Privilege Analysis</li>
+                <li>Peiru Yang -- Nested Kernel Instruction Rewriting and Privilege Analysis</li>
+            </ul>
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--
+    </section>
+
+    <section class="bg-info" id="recruiting">
+    -->
+      <div class="container text-dark" id="recruiting">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading mb-3">Recruiting</h2>
+            <hr class="my-4">
+          </div>
+        </div>
+      </div>
+            <!--<i class="fa fa-4x fa-shield text-primary mb-0 sr-icons"></i>-->
+      <div class="container text-white">
+        <div class="row">
+          <div class="col-lg-4">
+            <p>
+            <b class="text-dark">Are you interested in hacking?</b></br></br>
+            I am interested in folks who like to build real systems, taming complexity to simplify and introduce solutions. Types of hacking you might be interested in? How about A little compiler hacking with LLVM (hopefully never GCC :-))? Maybe you want to explore FreeBSD, Linux or even build your own microkernel? Maybe you want to model security and quantify it so we can convert security from art into a science? Maybe you want to do security analysis? Maybe you like hardware/software boundaries and prototyping FGPAs? How about formal modeling of low-level abstractions to prove relevant high level properties?
+            </p>
+          </div>
+          <div class="col-lg-4">
+              <p><b class="text-dark">What do we do?</b></br></br>
+              In my group students are already doing all of these and we are excited to do more! I primarily have three research thrusts: 1) abstractions, mechanisms, and policies for nesting security monitors into larger monolithic environments, i.e., security kernel design and implementation, 2) developing a least-privilege security compiler that translates an application into a minimal low-level but rich representation for automated analysis, transformation, and code generation; and 3) hardware/software co-design for retrofitting memory safety into existing ecosystems. 
+              </p>
+          </div>
+          <div class="col-lg-4">
+              <p><b class="text-dark">Want to join?</b></br></br>
+              Please get in touch with me if you are interested (Email, Twitter DM, etc.). Make sure to describe relevant experiences that would indicate your level of hacker skillz as well as describe what projects are of interest to you. If you don't connect the dots for me I likely won't see the connection. I'm looking for PhD students and will also consider adding a Postdoc.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="research">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
@@ -211,7 +293,7 @@
       </div>
     </section>
     
-    <section class="bg-dark" id="projects">
+    <section class="bg-dark" id="research">
       <div class="container">
         <div class="row">
             <div class="col-lg-12 text-white text-center">
@@ -418,7 +500,7 @@
     <!--
     <section class="p-0" id="projects">
     -->
-    <section class="p-0">
+    <section class="p-0" id="research" >
       <div class="container-fluid p-0">
         <div class="row no-gutters popup-gallery">
           <div class="col-lg-3 col-sm-6">
