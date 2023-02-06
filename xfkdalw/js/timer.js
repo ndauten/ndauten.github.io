@@ -1,4 +1,4 @@
-
+// Got from: https://www.sitepoint.com/build-javascript-countdown-timer-no-dependencies/
 function getTimeRemaining(endtime) {
   const total = Date.parse(endtime) - Date.parse(new Date());
   const seconds = Math.floor((total / 1000) % 60);
@@ -40,6 +40,6 @@ function initializeClock(id, endtime) {
 }
 
 //const deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
-const deadline = 'February 3 2023 18:00:59 GMT-0600';
+const deadline = 'February 16 2023 18:00:00 GMT-0600';
 initializeClock('clockdiv', deadline);
 
