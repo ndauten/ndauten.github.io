@@ -40,6 +40,6 @@ function initializeClock(id, endtime) {
 }
 
 //const deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
-const deadline = 'February 16 2023 18:00:00 GMT-0600';
+const deadline = 'February 17 2023 18:00:00 GMT-0600';
 initializeClock('clockdiv', deadline);
 
