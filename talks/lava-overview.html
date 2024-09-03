@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="version" content="S5 1.1" />
+  <meta name="author" content="Nathan Dautenhahn" />
+  <title>Taming Program Analysis, Transformation, and Monitoring with LAVA</title>
+  <style type="text/css">
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!-- configuration parameters -->
+  <meta name="defaultView" content="slideshow" />
+  <meta name="controlVis" content="hidden" />
+  <!-- style sheet links -->
+  <link rel="stylesheet" href="s5/default/slides.css" type="text/css" media="projection" id="slideProj" />
+  <link rel="stylesheet" href="s5/default/outline.css" type="text/css" media="screen" id="outlineStyle" />
+  <link rel="stylesheet" href="s5/default/print.css" type="text/css" media="print" id="slidePrint" />
+  <link rel="stylesheet" href="s5/default/opera.css" type="text/css" media="projection" id="operaFix" />
+  <!-- S5 JS -->
+  <script src="s5/default/slides.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="layout">
+<div id="controls"></div>
+<div id="currentSlide"></div>
+<div id="header"></div>
+<div id="footer">
+  <h1></h1>
+  <h2>Taming Program Analysis, Transformation, and Monitoring with
+LAVA</h2>
+</div>
+</div>
+<div class="presentation">
+<div class="title-slide slide">
+  <h1 class="title">Taming Program Analysis, Transformation, and
+Monitoring with LAVA</h1>
+  <h3 class="author">Nathan Dautenhahn</h3>
+</div>
+<div id="least-authority-virtual-architecture"
+class="slide section level2">
+<h2><a
+href="https://gitlab.com/fierce-lab/lava/lava-main">Least-Authority
+Virtual Architecture</a></h2>
+<!--## Taming Program Analysis, Transformation, and Monitoring with LAVA-->
+<ul>
+<li><em>Problem</em>: program analysis and monitoring is complex</li>
+<li><em>Challenges</em>: taming demands many tools and approaches</li>
+<li><em>Solution</em>: end-to-end analysis and monitoring framework</li>
+</ul>
+<!--
+
+## Challenges:
+
+- Represent: How to reason (automatically) in a unified and systematic cross layer way? calculus
+- Abstract: Specifying or finding the patterns/policies/DSLs? Top down + bottom up synthesis
+- Transform: Programming iteratively with tools semi automated assisted with correctness through type systems?
+- Translate+Map: Translate and verify the infrastructure for safe and compatible composability?
+- Runtime: efficiently, securely, and portably sandbox with monitoring for profile guided optimization?
+- Evolve: co-design and evolve based on security, compatibility, and performance criteria?
+
+## Solution: The Least-Authority Virtual Architecture
+-->
+<div class="float">
+<embed src="./figs/lava-arch.pdf" width="350" />
+<div class="figcaption">System Architecture</div>
+</div>
+</div>
+<div id="benefits-and-prototypes" class="slide section level2">
+<h2>Benefits and Prototypes</h2>
+<ul>
+<li><strong>Unified representations</strong>: <a
+href="https://gitlab.com/fierce-lab/lava/lava-main/commit/main/objenc">PCG
+and ePCG</a>; <a
+href="https://gitlab.com/fierce-lab/lava/lava-main/commit/main/taintflowpath">TFP
+and CDMPs</a>; <a
+href="https://gitlab.com/fierce-lab/lava/lava-main/commit/main/libsanity">CFPs
+(WIP)</a></li>
+<li><strong>Whole-Program Analysis</strong>: PCG, TFP</li>
+<li><strong>Language agnostic</strong>: <a
+href="https://gitlab.com/fierce-lab/lava/lava-main/commit/main/objenc">C/C++</a>,
+Java, JavaScript, Python, PHP, ++
+<!--[C/C++ via LLVM, Multiplier]() [Java, JavaScript, Python, PHP, etc.]() via [Jeorn](https://docs.joern.io)--></li>
+<li><strong>Toolchain independent analysis</strong>: via <a
+href="https://gitlab.com/fierce-lab/lava/lava-main/commit/main/llvm-lava">LLVM</a>;
+<a href="https://github.com/joernio/joern">Jeorn</a>; GCC (WIP); OBJDUMP
+(WIP); Multiplier (WIP)</li>
+<li><strong>Extensible hooking and monitoring</strong>: <a
+href="https://gitlab.com/fierce-lab/memorizer">Memorizer</a>, <a
+href="https://gitlab.com/fierce-lab/lava/lava-main/commit/main/llvm-lava">SoftCaps</a>,
+<a
+href="https://gitlab.com/fierce-lab/lava/lava-main/commit/main/libsanity">libsanity
+(WIP)</a>, <a href="">libmemorizer</a></li>
+<li><strong>Dynamic analysis and fuzzing</strong>: <a
+href="https://gitlab.com/fierce-lab/memorizer">Memorizer</a>, <a
+href="https://gitlab.com/fierce-lab/memorizer">Conffuzz</a></li>
+<li><strong>Sandboxed extensions</strong>: <a
+href="https://gitlab.com/fierce-lab/lava/lava-main/commit/main/llvm-lava">LavaBPF
+via SoftCaps</a> (WIP)</li>
+<li><strong>Profile guided optimizations</strong>: <a
+href="https://gitlab.com/fierce-lab/lava/lava-main/commit/main/objenc">LAVA
+Analysis via ePCG</a> (WIP)</li>
+<li><strong>Hybrid static and dynamic analysis</strong>: Hi-Res (WIP),
+<a
+href="https://fierce-lab.gitlab.io/memorizer/dashboard/index.html">ConfFuzz</a>,
+<a
+href="https://dl.acm.org/doi/10.1145/3625275.3625399">CIVScope</a></li>
+<li><strong>Progam Slicing and Analysis</strong>: <a
+href="https://gitlab.com/fierce-lab/lava/lava-main/commit/main/taintflowpath">TFP
+and CDMPs</a>; SanityFuzz (WIP)</li>
+<li><strong>Logic model for verification</strong>: WIP</li>
+<li><strong>Visualization tools</strong>: uSCOPE <a
+href="https://fierce-lab.gitlab.io/uscope/object-explorer/">Object-Explorer</a>;
+<a
+href="https://fierce-lab.gitlab.io/uscope/compartment-explorer/">Compartment-Explorer</a>;
+<a
+href="https://fierce-lab.gitlab.io/memorizer/dashboard/index.html">Linux
+Analysis</a>;</li>
+</ul>
+</div>
+<div id="the-object-encapsulation-model-and-program-capability-graph"
+class="slide section level2">
+<h2>The Object-Encapsulation Model and Program Capability Graph</h2>
+<p><embed src="./figs/objenc_design.pdf" width="350" /></p>
+</div>
+<div id="threat-modeling-and-analysis" class="slide section level2">
+<h2>Threat Modeling and Analysis</h2>
+<p><embed src="./figs/access_dist_nginx_execve.pdf" width="320" /></p>
+</div>
+<div id="use-cases" class="slide section level2">
+<h2>Use Cases</h2>
+<ul>
+<li>Explainability</li>
+<li>Refactor</li>
+<li>Maintenance</li>
+<li>Optimization</li>
+<li>Debugging</li>
+<li>Fuzzing</li>
+<li>Exploiting</li>
+<li>Patching</li>
+<li>Monitoring</li>
+<li>Augmenting/Specialization</li>
+<li>LLM Explainability</li>
+<li>Compartmentalizing</li>
+<li>Measuring</li>
+<li>Interactive fuzzing, refactor, proving, etc.</li>
+</ul>
+<!--
+## Key Results and Impact
+
+- Measuring privilege soundly: [Program Capability Graph (PCG) LangSec'24]
+- Measuring reachability soundly: [PCG, ePCG, Threat Modeling LangSec'24] [KISV'24]
+- Measuring exploitability: [ConfFuzz NDSS'23](https://conffuzz.github.io/), [CIVScope KISV'24](https://dl.acm.org/doi/10.1145/3625275.3625399), [PCG+Obj-Enc LangSec'24]
+- Measuring and securing compartment interface safety: [
+- Subprocess Compartmentalization and Enforcement: [Endokernel]
+- Automated Compartmentalization w/ portable software capability enforcement: [SoftCaps]
+- Monitoring and Augmentation: file level decompos
+
+
+### Tools
+
+- Analysis and Measurement:
+- Tracing and Fuzzing:
+    - [Memorizer](https://gitlab.com/fierce-lab/memorizer):
+      supporting HARDENED
+    - [ConfFuzz](https://conffuzz.github.io/)
+    - [Endokernel]()
+    - [SoftCaps]()
+-->
+</div>
+</div>
+</body>
+</html>
