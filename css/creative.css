@@ -9,7 +9,9 @@ html {
   height: 100%; }
 
 body {
-  font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif; }
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.7; }
 
 hr {
   max-width: 50px;
@@ -45,7 +47,7 @@ h6 {
   color: rgba(255, 255, 255, 0.7); }
 
 section {
-  padding: 8rem 0; }
+  padding: 5rem 0; }
 
 .section-heading {
   margin-top: 0; }
