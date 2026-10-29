@@ -370,6 +370,20 @@
                   </div>
               </div>
               <div class="row"> 
+                  <div class="col-lg-6">
+                      <p>
+                          <b class="text-primary">Endokernel</b> (<a href="http://nathandautenhahn.com/downloads/publications/usenixsecurity24-yang-fangfei.pdf">pdf</a>)
+                          (USENIX Security 2024) is an intra-process security monitor that isolates memory at subprocess granularity and securely emulates system interfaces. An inside-out methodology identifies the operating-system primitives that allow a monitor to be bypassed and maps them back to the interfaces that depend on them, which exposed missing policies and guided a fine-grained locking design for multithreaded safety.
+                      </p>
+                  </div>
+                  <div class="col-lg-6">
+                      <p>
+                          <b class="text-primary">Endoprocess</b> (<a href="http://nathandautenhahn.com/downloads/publications/yang-endoprocess-nspw23.pdf">pdf</a>)
+                          (NSPW 2023) is a microkernel-based approach to protection within a process. It exports a low-level abstraction, the subprocess, overlaid on existing process interfaces such as mmap and mprotect, and adds extensibility through application-layer modules while staying compatible with existing OS abstractions.
+                      </p>
+                  </div>
+              </div>
+              <div class="row"> 
                   <div class="col-lg-12 text-center">
                       <h3 class="mb-3 text-info text-center">
                           Automated Decomposition
@@ -378,14 +392,12 @@
               </div>
               <div class="row"> 
                   <div class="col-lg-6">
-                      <p><b class="text-primary">&mu;SCOPE.</b> (in preparation)
-                      Systematizing Compartmentalization Opportunities for
-                      Privilege Encapsulation (&mu;SCOPE) is a systematic
-                      methodology and framework for analyzing privileges within
-                      large scale code bases. The core idea is to synthesize
+                      <p><b class="text-primary">&mu;SCOPE</b> (RAID 2021)
+                      is a methodology and framework for analyzing
+                      least-privilege compartmentalization in large software
+                      artifacts. The core idea is to synthesize
                       decompositions directly from program behavior and measure
-                      the opportunity for least-privilege separation. We are
-                      currently applying it to Linux and JavaScript.  
+                      the opportunity for least-privilege separation.
                       </p>
                   </div>
                   <div class="col-lg-6">
@@ -395,6 +407,61 @@
                       applications along module boundaries and provides
                       abstractions for developers to specify cross-module
                       policies.
+                      </p>
+                  </div>
+              </div>
+              <div class="row"> 
+                  <div class="col-lg-6">
+                      <p>
+                          <b class="text-primary">Object-Encapsulation Model</b> (<a href="http://nathandautenhahn.com/downloads/publications/object-encaps-langsec23.pdf">pdf</a>)
+                          (LangSec 2023) translates a program into a Program Capability Graph that maps each operation to the code and data objects it may access, then groups them into encapsulated objects. The model quantifies privilege within a program automatically, so compartmentalization strategies can be measured and compared without deep knowledge of program internals.
+                      </p>
+                  </div>
+                  <div class="col-lg-6">
+                      <p>
+                          <b class="text-primary">CIVScope</b> (<a href="http://nathandautenhahn.com/downloads/publications/chien-civscope-kisv23.pdf">pdf</a>)
+                          (KISV 2023) builds on that measurement to model data flows through compartment interfaces and automatically measure the attack surface left by compartment-bypassing flows. Along diverse Linux kernel boundaries it finds 22,741 such paths across 395 of 4,394 driver interfaces, too many to correct by hand.
+                      </p>
+                  </div>
+              </div>
+              <div class="row"> 
+                  <div class="col-lg-6">
+                      <p>
+                          <b class="text-primary">ConfFuzz</b> (<a href="http://nathandautenhahn.com/downloads/publications/ndss2023_f117_paper.pdf">pdf</a>|<a href="https://github.com/conffuzz/conffuzz">code</a>)
+                          (NDSS 2023) studies Compartment Interface Vulnerabilities: when software is compartmentalized, a call that used to come from a trusted component can become an attack from a malicious one. ConfFuzz, an in-memory fuzzer for these interfaces, uncovered 629 vulnerabilities across 25 applications and 36 possible compartment APIs.
+                      </p>
+                  </div>
+                  <div class="col-lg-6">
+                      <p>
+                          <b class="text-primary">SoK: Software Compartmentalization</b> (<a href="http://nathandautenhahn.com/downloads/publications/lefeuvre-sok-compartmentalization-sp25.pdf">pdf</a>)
+                          (IEEE S&amp;P 2025) proposes a unified model for analyzing and comparing compartmentalization approaches, uses it to review 211 research efforts and 61 mainstream systems, and examines why compartmentalization is still not mainstream practice.
+                      </p>
+                  </div>
+              </div>
+              <div class="row"> 
+                  <div class="col-lg-12 text-center">
+                      <h3 class="mb-3 text-info text-center">
+                          Exploit and Authority Detection
+                      </h3>
+                  </div>
+              </div>
+              <div class="row"> 
+                  <div class="col-lg-4">
+                      <p>
+                          <b class="text-primary">Changes in the Guard</b> (<a href="http://nathandautenhahn.com/downloads/publications/dautenhahn-bratus-changes-in-the-guard-sure26.pdf">pdf</a>)
+                          (SURE 2026) introduces Guarded Flow Paths, in which every value flow carries the branch conditions under which it happens. Differential authority analysis runs one reachability query on both sides of a patch to name the check the patch removed and the authority it exposed.
+                      </p>
+                  </div>
+                  <div class="col-lg-4">
+                      <p>
+                          <b class="text-primary">Hi-Res</b> (<a href="http://nathandautenhahn.com/downloads/publications/yang-HiRes-langsec25.pdf">pdf</a>)
+                          (IEEE SPW 2025) is a programmable detection framework that lifts high-level kernel exploit behaviors from low-level memory operations, building behavioral fingerprints from observed access patterns instead of hand-crafted monitors.
+                      </p>
+                  </div>
+                  <div class="col-lg-4">
+                      <p>
+                          <b class="text-primary">Crypto-Ransomware and Their Defenses</b> (<a href="http://nathandautenhahn.com/downloads/publications/song-crypto-ransomware-csur26.pdf">pdf</a>)
+                          (ACM Computing Surveys 2026) characterizes ransomware behavior in depth and evaluates defenses by deployability as well as detection accuracy.
                       </p>
                   </div>
               </div>
@@ -778,7 +845,7 @@
               <p class="mt-2">Fine-grained object tracing in Linux.</p>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6 text-center">
+          <div class="col-lg-2 col-md-6 text-center">
             <div class="service-box mt-5 mx-auto">
               <i class="mt-2 fa fa-3x fa-square mb-3 sr-icons"></i>
               <h3>
@@ -792,7 +859,7 @@
               </p>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6 text-center">
+          <div class="col-lg-2 col-md-6 text-center">
             <div class="service-box mt-5 mx-auto">
               <i class="mt-2 fa fa-3x fa-times-circle mb-3 sr-icons"></i>
               <h3>
@@ -802,6 +869,16 @@
               <p class="mt-2">
                   Passive fingerprinting attack on Tor network.
               </p>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <i class="mt-2 fa fa-3x fa-bug mb-3 sr-icons"></i>
+              <h3>
+                <a class="btn btn-primary"
+                  href="https://github.com/conffuzz/conffuzz">ConfFuzz</a>
+              </h3>
+              <p class="mt-2">Fuzzing for compartment interface vulnerabilities.</p>
             </div>
           </div>
         </div>
